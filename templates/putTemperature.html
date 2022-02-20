@@ -1,0 +1,18 @@
+{% extends 'getname.html' %}
+
+{% block place %}
+<div class="p-5 rounded bg-secondary">
+    <div>
+        <h4>Here's the weather for {{temp_details.location}}</h4>
+        <img src="https://openweathermap.org/img/w/{{temp_details.icon}}.png" class="img-fluid" alt="Responsive image">
+    </div>
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item">Temperature: {{temp_details.temperature}} &deg;C</li>
+            <li class="list-group-item">Humidity: {{temp_details.humidity}}</li>
+            <li class="list-group-item">Wind Speed: {{temp_details.windspeed}}</li>
+        </ul>
+    </div>
+
+</div>
+{% endblock %}
